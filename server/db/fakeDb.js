@@ -15,6 +15,24 @@ export const fakeDb = {
     name: 'House Classic',
     from: 'Burgers HA HA'
   }
+  ],
+
+  shakes: [{
+    id: 1,
+    price: 10,
+    name: 'Strawberry Steve',
+    whipcream: true
+  }, {
+    id: 2,
+    price: 9,
+    name: 'Chocolate Chomper',
+    whipcream: true
+  }, {
+    id: 3,
+    price: 9,
+    name: 'Very Vanilla',
+    whipcream: false
+  }
   ]
 
 }

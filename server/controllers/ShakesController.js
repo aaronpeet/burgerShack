@@ -1,9 +1,9 @@
-import { burgersService } from '../services/BurgersService'
+import { shakesService } from '../services/ShakesService'
 import BaseController from '../utils/BaseController'
 
-export class BurgersController extends BaseController {
+export class ShakesController extends BaseController {
   constructor() {
-    super('api/burgers')
+    super('api/shakes')
     this.router
       .get('', this.getAll)
       .get('/:id', this.getById)
@@ -14,8 +14,8 @@ export class BurgersController extends BaseController {
 
   getAll(req, res, next) {
     try {
-      const burgers = burgersService.getAll()
-      res.send(burgers)
+      const shakes = shakesService.getAll()
+      res.send(shakes)
     } catch (error) {
       next(error)
     }
@@ -23,7 +23,7 @@ export class BurgersController extends BaseController {
 
   getById(req, res, next) {
     try {
-      const burgers = burgersService.getById(req.params.id)
+      const shakes = shakesService.getById(req.params.id)
     } catch (error) {
       next(error)
     }
@@ -31,8 +31,7 @@ export class BurgersController extends BaseController {
 
   create(req, res, next) {
     try {
-      const burgers = burgersService.create(req.body)
-      res.send(burgers)
+      const shakes = shakesService.create(req.body)
     } catch (error) {
       next(error)
     }
@@ -40,7 +39,7 @@ export class BurgersController extends BaseController {
 
   edit(req, res, next) {
     try {
-      const burgers = burgersService.edit(req.body)
+      const shakes = shakesService.edit(req.body)
     } catch (error) {
       next(error)
     }
@@ -48,7 +47,7 @@ export class BurgersController extends BaseController {
 
   delete(req, res, next) {
     try {
-      burgersService.delete(req.params.id)
+      shakesService.delete(req.params.id)
       res.send('Deleted')
     } catch (error) {
       next(error)
