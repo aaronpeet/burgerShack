@@ -24,6 +24,7 @@ export class BurgersController extends BaseController {
   getById(req, res, next) {
     try {
       const burgers = burgersService.getById(req.params.id)
+      res.send(burgers)
     } catch (error) {
       next(error)
     }
@@ -41,6 +42,7 @@ export class BurgersController extends BaseController {
   edit(req, res, next) {
     try {
       const burgers = burgersService.edit(req.body)
+      res.send(burgers)
     } catch (error) {
       next(error)
     }

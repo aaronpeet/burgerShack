@@ -33,6 +33,32 @@ export const fakeDb = {
     name: 'Very Vanilla',
     whipcream: false
   }
+  ],
+
+  cats: [{
+    id: 1,
+    name: 'Fluffy',
+    foods: 'birds',
+    friends: false
+  }, {
+    id: 2,
+    name: 'Mr. Jingles',
+    foods: 'mice',
+    friends: false
+  }
+  ],
+
+  dogs: [{
+    id: 1,
+    name: 'Monkey',
+    foods: 'scrambled eggs',
+    friends: true
+  }, {
+    id: 2,
+    name: 'Chuck Norris',
+    foods: 'bacon',
+    friends: true
+  }
   ]
 
 }
